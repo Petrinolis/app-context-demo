@@ -2,7 +2,7 @@ import { createActions, handleActions, combineActions } from 'redux-actions';
 
 const defaultState = { counter: 10 };
 
-const { increment, decrement } = createActions({
+export const { increment, decrement } = createActions({
   INCREMENT: (amount = 1) => ({ amount }),
   DECREMENT: (amount = 1) => ({ amount: -amount })
 });
