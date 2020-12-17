@@ -1,14 +1,20 @@
-
-import { useAppContext } from '../../context/appContext'
+import { useAppContext } from "../../context/appContext";
 
 const useApp = () => {
-  const [{counter}, {increment, decrement}] = useAppContext();
+  const [{ counter }, { increment, decrement }] = useAppContext();
+
+  const handleIncrement = () => {
+    increment(1);
+  };
+  const handleDecrement = () => {
+    decrement(-1);
+  };
 
   return {
     counter,
-    increment,
-    decrement
-  }
-}
+    handleIncrement,
+    handleDecrement,
+  };
+};
 
-export default useApp
+export default useApp;
